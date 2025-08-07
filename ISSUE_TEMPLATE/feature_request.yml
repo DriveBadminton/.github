@@ -1,0 +1,27 @@
+name: 기능 요청
+description: 새로운 기능을 제안할 때 사용하세요.
+title: "[기능 요청]: "
+labels:
+  - enhancement
+body:
+  - type: input
+    id: motivation
+    attributes:
+      label: 제안 배경
+      description: 왜 이 기능이 필요한지 설명하세요.
+      placeholder: "예: 현재 기능으로는 ~이 어렵습니다."
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: 기능 설명
+      description: 제안하는 기능의 세부 내용을 작성하세요.
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: 사용 시나리오
+      description: 이 기능이 어떻게 사용될지 예시를 작성하세요.
+  - type: textarea
+    id: alternatives-considered
+    attributes:
+      label: 대안 검토
+      description: 고려해본 다른 방법 또는 대안을 설명하세요.

@@ -1,0 +1,33 @@
+name: 버그 리포트
+description: 버그를 보고할 때 사용하세요.
+title: "[버그]: "
+labels:
+  - bug
+  - triage
+body:
+  - type: input
+    id: environment
+    attributes:
+      label: 실행 환경
+      description: OS, 브라우저 및 애플리케이션 버전을 입력하세요.
+      placeholder: "예: Windows 10, Chrome 95, v2.3.1"
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: 재현 방법
+      description: 버그를 재현하기 위한 구체적인 단계를 작성하세요.
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: 기대 동작
+      description: 예상되는 동작을 설명하세요.
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: 실제 동작
+      description: 실제로 발생한 동작을 설명하세요.
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: 추가 정보
+      description: 로그, 스크린샷 등 추가 자료가 있다면 첨부하세요.

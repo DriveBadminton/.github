@@ -1,0 +1,22 @@
+name: 문서 개선
+description: 기존 문서를 수정하거나 개선할 때 사용하세요.
+title: "[문서]: "
+labels:
+  - documentation
+body:
+  - type: input
+    id: document-location
+    attributes:
+      label: 문서 위치
+      description: 수정할 문서의 경로 또는 URL을 입력하세요.
+      placeholder: "예: docs/setup.md"
+  - type: textarea
+    id: change-summary
+    attributes:
+      label: 변경 내용 요약
+      description: 어떤 부분을 어떻게 수정하거나 추가할지 설명하세요.
+  - type: textarea
+    id: reason
+    attributes:
+      label: 변경 이유
+      description: 해당 변경이 필요한 이유를 서술하세요.
