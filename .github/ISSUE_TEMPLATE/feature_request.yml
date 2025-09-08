@@ -13,15 +13,6 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: subject
-    attributes:
-      label: Subject
-      description: 이슈 제목에 들어갈 간단한 요약 (명령형)
-      placeholder: "add oauth2 device flow"
-    validations:
-      required: true
-
   - type: textarea
     id: description
     attributes:
