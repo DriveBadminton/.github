@@ -4,15 +4,6 @@ title: "feat(<scope>): <subject>"
 labels:
   - feat
 body:
-  - type: markdown
-    attributes:
-      value: |
-        ## 제목 규칙 (Conventional Commits)
-        - **형식**: `feat(<scope>): <subject>`
-        - **예시**: `feat(auth): add oauth2 device flow`
-        - `<scope>`: 변경되는 영역 (예: auth, profile, billing)
-        - `<subject>`: 간단한 요약 (명령형, 영어 50자 이내 권장)
-
   - type: input
     id: scope
     attributes:
