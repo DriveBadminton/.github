@@ -1,27 +1,43 @@
-name: 기능 요청
+name: Feature
 description: 새로운 기능을 제안할 때 사용하세요.
-title: "[기능 요청]: "
+title: "feat(<scope>): <subject>"
 labels:
-  - enhancement
+  - feat
 body:
-  - type: input
-    id: motivation
+  - type: markdown
     attributes:
-      label: 제안 배경
-      description: 왜 이 기능이 필요한지 설명하세요.
-      placeholder: "예: 현재 기능으로는 ~이 어렵습니다."
+      value: |
+        ## 제목 규칙 (Conventional Commits)
+        - **형식**: `feat(<scope>): <subject>`
+        - **예시**: `feat(auth): add oauth2 device flow`
+        - `<scope>`: 변경되는 영역 (예: auth, profile, billing)
+        - `<subject>`: 간단한 요약 (명령형, 영어 50자 이내 권장)
+
+  - type: input
+    id: scope
+    attributes:
+      label: Scope
+      description: 변경되는 코드 영역(모듈, 패키지, 도메인 등)
+      placeholder: "예: auth, profile, billing"
+    validations:
+      required: true
+
+  - type: input
+    id: subject
+    attributes:
+      label: Subject
+      description: 이슈 제목에 들어갈 간단한 요약 (명령형)
+      placeholder: "add oauth2 device flow"
+    validations:
+      required: true
+
   - type: textarea
-    id: proposed-solution
+    id: description
     attributes:
       label: 기능 설명
-      description: 제안하는 기능의 세부 내용을 작성하세요.
-  - type: textarea
-    id: use-cases
-    attributes:
-      label: 사용 시나리오
-      description: 이 기능이 어떻게 사용될지 예시를 작성하세요.
-  - type: textarea
-    id: alternatives-considered
-    attributes:
-      label: 대안 검토
-      description: 고려해본 다른 방법 또는 대안을 설명하세요.
+      description: 제안하는 기능의 세부 내용 또는 해결하려는 문제를 간단히 작성하세요.
+      placeholder: |
+        - 문제점: 현재 SSO 미지원으로 기업 사용자 온보딩이 지연됩니다.
+        - 제안: OAuth2 Device Flow 지원 추가
+    validations:
+      required: true
