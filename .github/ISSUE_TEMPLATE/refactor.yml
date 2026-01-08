@@ -1,0 +1,30 @@
+name: Refactor
+description: 리팩터링 제안 또는 작업 내용을 기록할 때 사용하세요.
+title: "[REFACTOR]: "
+labels:
+  - REFACTOR
+body:
+  - type: input
+    id: scope
+    attributes:
+      label: Scope
+      description: 변경되는 코드 영역(모듈, 패키지, 도메인 등)
+      placeholder: "예: auth, profile, billing"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 리팩터링 내용
+      description: 무엇을 어떻게 개선하려는지 설명하세요.
+      placeholder: |
+        - 대상: auth/session
+        - 방향: 책임 분리 및 의존성 정리
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: 영향 및 테스트
+      description: 영향 범위와 필요한 테스트를 적어주세요.
+      placeholder: "예: auth 모듈 영향, 단위 테스트 실행"

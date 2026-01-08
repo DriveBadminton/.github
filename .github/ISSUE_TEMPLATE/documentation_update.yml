@@ -1,8 +1,8 @@
 name: 문서 개선
 description: 기존 문서를 수정하거나 개선할 때 사용하세요.
-title: "[문서]: "
+title: "[DOCS]: "
 labels:
-  - documentation
+  - DOCUMENTATION
 body:
   - type: input
     id: document-location
@@ -15,8 +15,10 @@ body:
     attributes:
       label: 변경 내용 요약
       description: 어떤 부분을 어떻게 수정하거나 추가할지 설명하세요.
+      placeholder: "예: 설치 단계 최신화"
   - type: textarea
     id: reason
     attributes:
       label: 변경 이유
       description: 해당 변경이 필요한 이유를 서술하세요.
+      placeholder: "예: 신규 옵션 추가로 문서 불일치"

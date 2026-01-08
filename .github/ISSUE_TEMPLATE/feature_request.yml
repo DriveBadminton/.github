@@ -1,8 +1,8 @@
 name: Feature
 description: 새로운 기능을 제안할 때 사용하세요.
-title: "feat(<scope>): <subject>"
+title: "[FEAT]: "
 labels:
-  - feat
+  - FEAT
 body:
   - type: input
     id: scope
