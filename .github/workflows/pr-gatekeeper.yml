@@ -1,0 +1,28 @@
+name: PR Gatekeeper
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+
+jobs:
+  validate-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate PR title
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          echo "$TITLE" | grep -Eq '^(feat|fix|refactor|perf|chore|test)\([a-z\-]+\): .+' || {
+            echo "Invalid PR title format."
+            echo "Expected: <type>(<scope>): <summary>"
+            exit 1
+          }
+
+      - name: Validate PR body (Summary required)
+        env:
+          BODY: ${{ github.event.pull_request.body }}
+        run: |
+          echo "$BODY" | grep -q "## Summary" || {
+            echo "PR body must contain a ## Summary section."
+            exit 1
+          }
